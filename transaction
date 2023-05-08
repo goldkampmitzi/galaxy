@@ -1,0 +1,38 @@
+<div class="panel-leque" style="text-align: center;margin-top: 16px;">
+					<div class="txt_info">
+						<div class="panel-leque-heading"><span class="label-leque label-leque-danger">Warning</span></div>
+						<div class="panel-body">It is very important that you transfer money with this note, otherwise the funds will not be credited automatically.</div>
+						<div id="cash"></div>
+					</div>
+					
+					<div class="btc_text" style="display:none">
+						<div class="panel-leque-heading"><span class="label-leque label-leque-danger">Warning</span></div>
+						<div class="panel-body">Платеж будет засчитан после 3х подтверждений транзакции.</div>
+						<div id="cash"></div>
+					</div>
+					
+				</div>
+				
+				
+				
+				<button type="button" onclick="" data-loading-text="Checking..." class="checkpaybtn btn-leque btn-leque-default btn-leque-lg btn-leque-block">Check payment</button>
+				
+				
+			</div>
+			<button type="button" data-toggle='modal' data-target='#checkord' style="    float: left;margin-top: 5px;" class="btn-leque btn-leque-primary btn-leque-xs">Close window with payment?</button>
+		</div>
+		
+	</div>
+	
+	<div class="remodal"  data-remodal-id="checkord" role="dialog" >
+		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+		<h2 class="center-block topmargin">Payment verification</h2> 
+		<noindex>
+			<div class="alert-leque alert-leque-success" role="alert">Enter in the field a set of characters from square brackets from the note with which you made the payment and click Check Payment. Example: <b>invoice[NWBJsk9e0RMQHNi]</b> you need to enter NWBJsk9e0RMQHNi</div>
+		</noindex>
+		<div class="form-leque-group">
+			
+			<input onkeyup="link()" type="text" id="descript" style="width: 97%;"class="form-leque-control input-leque-sm"  placeholder="Note from brackets">
+			<br>
+			<button type="submit" id='link' data-loading-text='Checking...' class="checkpaybtnr btn-leque btn-leque-lg btn-leque-block btn-leque-primary">Check payment</button>
+		</div>
